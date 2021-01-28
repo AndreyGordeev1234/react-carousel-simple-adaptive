@@ -1,0 +1,33 @@
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__image {
+	position	: relative;
+  width: 100%; /* for IE 6 */
+}
+
+.card__main {
+  position: absolute;
+  color: black;
+  text-align: center;
+}
+
+.card__main-4 {
+  position: absolute;
+  left: 30%;
+}
+
+code {
+  background-color: rgb(201, 201, 201);
+  display: inline-block; 
+  width: 70%;
+  padding: 10px 15px;
+  line-height: 20px;
+  border-radius: 10px;
+}

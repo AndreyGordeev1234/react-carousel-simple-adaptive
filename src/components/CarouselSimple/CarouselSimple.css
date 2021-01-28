@@ -1,0 +1,110 @@
+.carousel-simple-adaptive-slider {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-color: #292929;
+  color: white;
+}
+
+.carousel-simple-adaptive-slider-slide {
+  position: relative;
+}
+
+.carousel-simple-adaptive-slider-slide * {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+}
+
+.carousel-simple-adaptive-slider-btn-prev, .carousel-simple-adaptive-slider-btn-next {
+  position: absolute;
+  color: black;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-size: 16pt;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 100%;
+  outline: none;
+  transition: background-color .5s;
+}
+
+.carousel-simple-adaptive-slider-btn-prev:active, .carousel-simple-adaptive-slider-btn-prev:focus, .carousel-simple-adaptive-slider-btn-next:active, .carousel-simple-adaptive-slider-btn-next:focus {
+  border: 1px solid #363636;
+}
+
+.carousel-simple-adaptive-slider-btn-prev:hover, .carousel-simple-adaptive-slider-btn-next:hover {
+  background-color: rgba(219, 219, 219, 0.5);
+  transition: background-color .5s;
+}
+
+.carousel-simple-adaptive-slider-btn-prev::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+  background: url('./arrow.svg') no-repeat center;
+}
+
+.carousel-simple-adaptive-slider-btn-next::before {
+  transform: translate(-50%, -50%);
+  background: url('./arrow.svg') no-repeat center;
+}
+
+.carousel-simple-adaptive-slider-btn-prev::before, .carousel-simple-adaptive-slider-btn-next::before {
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  background-size: 40px;
+}
+
+.carousel-simple-adaptive-slider-btn-prev {
+  left: 0;
+}
+
+.carousel-simple-adaptive-slider-btn-prev:disabled, .carousel-simple-adaptive-slider-btn-next:disabled {
+  opacity: 0.5;
+  cursor: default;
+  background-color: transparent;
+}
+
+.carousel-simple-adaptive-slider-btn-next {
+  right: 0;
+}
+
+.carousel-simple-adaptive-slider-set-slide-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-simple-adaptive-slider-btn-set-slide {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(73, 73, 73, 0.5);
+  margin-right: 5px;
+  cursor: pointer;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.carousel-simple-adaptive-slider-btn-set-slide:last-child {
+  margin-right: 0;
+}
+
+.carousel-simple-adaptive-slider-btn-set-slide-active {
+  background-color: #f0f0f0;
+}
