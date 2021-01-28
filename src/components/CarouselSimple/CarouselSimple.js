@@ -15,11 +15,7 @@ const CarouselSimple = React.memo(
     const [curr, setCurr] = useState(0);
     const slideCount = infinite ? Infinity : children.length;
     const sliderRef = useRef(null);
-    const { width: slideWidth, height: slideHeight } = useResize(
-      sliderRef,
-      maxWidth,
-      height,
-    );
+    const { width: slideWidth } = useResize(sliderRef, maxWidth);
 
     const isPrevDisabled = () => {
       if (infinite) return false;
@@ -89,7 +85,7 @@ const CarouselSimple = React.memo(
               key={i}
               curr={curr}
               width={slideWidth}
-              height={slideHeight}
+              height={height}
               translate={translate}
               slideCount={slideCount}
             >

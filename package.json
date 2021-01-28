@@ -25,7 +25,9 @@
     "build": "cross-env NODE_ENV=production webpack",
     "watch": "cross-env NODE_ENV=development webpack --watch",
     "start": "cross-env NODE_ENV=development webpack serve --open",
-    "publish:npm": "rmdir /s dist && mkdir dist && babel src/components/CarouselSimple -d dist --copy-files"
+    "publish:npm": "rmdir /s dist && mkdir dist && babel src/components/CarouselSimple -d dist --copy-files",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "babel": {
     "presets": [
@@ -47,6 +49,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.17.0",

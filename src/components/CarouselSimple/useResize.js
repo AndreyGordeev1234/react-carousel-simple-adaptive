@@ -1,13 +1,11 @@
 const { useState, useEffect } = require('react');
 
-export const useResize = (myRef, initialWidth, initialHeight) => {
+export const useResize = (myRef, initialWidth) => {
   const [width, setWidth] = useState(initialWidth);
-  const [height, setHeight] = useState(initialHeight);
 
   useEffect(() => {
     const handleResize = () => {
       setWidth(myRef.current.offsetWidth);
-      setHeight(myRef.current.offsetHeight);
     };
 
     if (myRef.current) {
@@ -21,5 +19,5 @@ export const useResize = (myRef, initialWidth, initialHeight) => {
     };
   }, [myRef]);
 
-  return { width, height };
+  return { width };
 };
