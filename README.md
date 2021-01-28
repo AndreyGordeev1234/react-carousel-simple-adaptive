@@ -1,4 +1,4 @@
-# React Simple Adaptive Carousel
+# React simple adaptive carousel
 
 Simple, responsive and customizable carousel component for your React app.
 
@@ -10,9 +10,9 @@ $ npm install --save react-carousel-simple-adaptive
 
 ## Features
 
-- Work for mobile and desktop devices
-- Support swipes
-- Work for any HTML content
+- Works for mobile and desktop devices
+- Supports swipes
+- Works for any HTML content
 - Animated
 - Finger-following swipes
 - Supports multiple carousels on the screen
